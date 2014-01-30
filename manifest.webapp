@@ -13,9 +13,7 @@
         "url": "http://www.phocus.com.br"
     },
     "permissions": {
-        "systemXHR": {
-            "description": "AJAX"
-        }
+        "systemXHR": {}
     },
     "type":"privileged"
 }
