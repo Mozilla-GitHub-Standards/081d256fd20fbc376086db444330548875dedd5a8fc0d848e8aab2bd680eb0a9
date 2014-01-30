@@ -1,15 +1,21 @@
 {
-  "version": "0.1",
-  "name": "TweetMemory",
-  "description": "Memory Game with your Twitter Followers",
-  "launch_path": "/index.html",
-  "icons": {
-    "16": "/img/icons/icon-16.png",
-    "48": "/img/icons/icon-48.png",
-    "128": "/img/icons/icon-128.png"
-  },
-  "developer": {
-    "name": "Jonathan Querubina",
-    "url": "http://www.phocus.com.br"
-  }
+    "version": "0.1",
+    "name": "TweetMemory",
+    "description": "Memory Game with your Twitter Followers",
+    "launch_path": "/index.html",
+    "icons": {
+        "16": "/img/icons/icon.png",
+        "48": "/img/icons/icon.png",
+        "128": "/img/icons/icon.png"
+    },
+    "developer": {
+        "name": "Jonathan Querubina",
+        "url": "http://www.phocus.com.br"
+    },
+    "permissions": {
+        "systemXHR": {
+            "description": "AJAX"
+        }
+    },
+    "type":"privileged"
 }
