@@ -9,6 +9,7 @@
 body{
     background-image: url('../img/app/bg.png');
     background-size:320px 480px;
+    overflow: hidden;
 }
 
 .splash img{
@@ -69,9 +70,11 @@ body{
     width:240px;
     height:350px;
     z-index: 97;
+    
     .piece{
         width:60px;
         height:60px;
+        display: block;
         position: absolute;
         background-image: url('../img/app/back.png');
         background-size: 60px 60px;
@@ -82,7 +85,6 @@ body{
             border-radius: 10px;
             left: 5px;
             top:5px;
-            display: none;
         }
     }
     .newGame{
@@ -96,4 +98,22 @@ body{
         background-size:240px;
         border: none;
     }
+    .timer{
+        position: absolute;
+        left:0px;
+        top:-62px;
+        font-size: 41px;
+        width:240px;
+        height:46px;
+        text-align: center;
+    }
+}
+.win{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 320px;
+    height: 480px;
+    //display: none;
+    z-index: 100;
 }
