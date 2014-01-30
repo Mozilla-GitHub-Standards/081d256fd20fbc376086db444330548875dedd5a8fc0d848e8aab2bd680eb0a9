@@ -1,6 +1,6 @@
 {
     "version": "0.1",
-    "name": "TweetMemory",
+    "name": "TwitMemory",
     "description": "Memory Game with your Twitter Followers",
     "launch_path": "/index.html",
     "icons": {

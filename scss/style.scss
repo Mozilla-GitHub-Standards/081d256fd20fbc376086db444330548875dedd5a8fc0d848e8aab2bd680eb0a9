@@ -4,6 +4,7 @@
     list-style-type: none;
     font-size: 17px;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    outline: none;
 }
 
 body{
@@ -90,7 +91,7 @@ body{
     .newGame{
         position: absolute;
         left:0px;
-        bottom:-17px;
+        bottom:-7px;
         width:240px;
         height: 46px;
         background: none;
