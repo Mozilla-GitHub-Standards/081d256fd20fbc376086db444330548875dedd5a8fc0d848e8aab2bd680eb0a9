@@ -4,7 +4,7 @@ App para a hackaton da Mozila na #CPBR7.
 
 TweetMemory
 =======
-Digitando seu perfil do facebook, o app gera um jogo da memória com seguidores aleatórios. Um temporizador é iniciado para marcar o tempo do jogo.
+Digitando seu perfil do Twitter, o app gera um jogo da memória com seguidores aleatórios. Um temporizador é iniciado para marcar o tempo do jogo.
 
 API TWITTER
 =======
