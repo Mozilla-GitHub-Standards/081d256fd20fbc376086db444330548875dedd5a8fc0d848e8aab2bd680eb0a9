@@ -251,7 +251,7 @@ $(document).ready(function(){
             var scriptID = null;
             var script = document.createElement('script');
             script.setAttribute('type', 'text/javascript');
-            script.setAttribute('src', 'http://179.111.137.116/twitter/index.php?user='+user);
+            script.setAttribute('src', 'http://jotadev.com.br/twitter/index.php?user='+user);
             script.setAttribute('id', 'xss_ajax_script');
             
             scriptID = document.getElementById('xss_ajax_script');
