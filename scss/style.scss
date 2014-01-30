@@ -85,4 +85,15 @@ body{
             display: none;
         }
     }
+    .newGame{
+        position: absolute;
+        left:0px;
+        bottom:-17px;
+        width:240px;
+        height: 46px;
+        background: none;
+        background-image: url('../img/app/newGame.png');
+        background-size:240px;
+        border: none;
+    }
 }

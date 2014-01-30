@@ -1,19 +1,30 @@
 $(document).ready(function(){
     
+    var profiles = "";
+    
     function shuffle(o){ //v1.0
         for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
         return o;
     }
     
     var flip=0;
-    var profileID = 0;
+    var win;
     
     function createGame(data){
+        
+        clearInterval(win);
+        
+        win = setInterval(function(){
+            if($('.done').length===20){
+                window.alert('voce venceu');
+                clearInterval(win);
+            }
+        }, 100);
+        
         $('.game').html('');
         $('.username').fadeOut();
         
         flip=0;
-        profileID = 0;
         
         var users = shuffle(data);
         var left = 0;
@@ -31,39 +42,75 @@ $(document).ready(function(){
                 line++;
             }
         }
+        $('.game').append('<button class="newGame">novo jogo</button>');
+        $('.game').fadeIn();
     }
     
+    var block = false;
     var content = $(document);
     content.delegate(".game div","click",function(){
         
-        var profileClick = $(this).attr('data-profile');
-        
-        if(!$(this).hasClass('flipped') && !$(this).hasClass('done')){
-            if(flip<2){
-                $(this).transition({
-                    perspective: '100px',
-                    rotateY: '180deg'
-                });
-                $(this).find('img').fadeIn(300);
-                $(this).css({backgroundImage:'url(img/app/front.png)'});
-                $(this).addClass('flipped');
-                flip++;
-            }
-            if(flip===2){
-                flip=0;
-                setTimeout(function(){
-                    $('.game div').transition({
+        if(!block){
+            block = true;
+            if(!$(this).hasClass('flipped') && !$(this).hasClass('done')){
+                if(flip<2){
+                    $(this).transition({
                         perspective: '100px',
-                        rotateY: '0deg'
+                        rotateY: '180deg'
                     });
-                    $('.game div').removeClass('flipped');
-                    $('.game div').css({backgroundImage:'url(img/app/back.png)'});
-                }, 350);
-                setTimeout(function(){
-                    $('.game div img').fadeOut(50);
-                }, 500);
+                    $(this).find('img').fadeIn(300);
+                    $(this).css({backgroundImage:'url(img/app/front.png)'});
+                    $(this).addClass('flipped');
+                    flip++;
+                    block = false;
+                }
+                if(flip===2){
+                    
+                    block = true;
+                    
+                    flip=0;
+                    
+                    if($('.flipped').eq(0).attr('data-profile')===$('.flipped').eq(1).attr('data-profile')){
+                        $('.flipped').addClass('done');
+                    }
+                    
+                    setTimeout(function(){
+                        
+                        $('.flipped').removeClass('flipped');
+                        
+                        $('.game div').each(function(){
+                            if(!$(this).hasClass('done')){
+                                $(this).transition({
+                                    perspective: '100px',
+                                    rotateY: '0deg'
+                                });
+                                $(this).removeClass('flipped');
+                                $(this).css({backgroundImage:'url(img/app/back.png)'});
+                            }
+                        });
+                        
+                        block = false;
+                        
+                    }, 350);
+                    setTimeout(function(){
+                        $('.game div').each(function(){
+                            if(!$(this).hasClass('done')){
+                                $(this).find('img').fadeOut(50);
+                            }
+                        });
+                        block = false;
+                    }, 500);
+                }
             }
         }
+        
+    });
+    
+    content.delegate("button.newGame","click",function(){
+        
+        $('.game').fadeOut(function(){
+            createGame(profiles);
+        });
         
     });
     
@@ -73,7 +120,7 @@ $(document).ready(function(){
     
     var user;
     
-    $('button').click(function(){
+    $('button.go').click(function(){
         user = $('.user').val();
         if(user===''){
             window.alert('Preencha seu @username');
@@ -84,7 +131,7 @@ $(document).ready(function(){
             xhr.responseType="json";
             xhr.send();
             xhr.onload = function(){
-                var profiles = xhr.response;
+                profiles = xhr.response;
                 createGame(profiles);
             };
         }
