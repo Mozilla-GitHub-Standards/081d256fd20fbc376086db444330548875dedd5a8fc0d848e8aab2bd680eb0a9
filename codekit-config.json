@@ -33,16 +33,14 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/js\/main.min.js" : {
+    "\/css\/style.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/main.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/main.min.min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/css\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/app\/newGame.png" : {
       "ignoreWasSetByUser" : 0,
@@ -55,14 +53,25 @@
       "initialSize" : 9667,
       "fileType" : 8192
     },
-    "\/css\/style.css" : {
+    "\/js\/main.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/style.css",
+      "inputAbbreviatedPath" : "\/js\/main.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/main.min.min.js",
+      "fileType" : 64
+    },
+    "\/twitter\/OAuth.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/twitter\/OAuth.php",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "fileType" : 2048
     },
     "\/img\/app\/login.png" : {
       "ignoreWasSetByUser" : 0,
@@ -74,15 +83,6 @@
       "outputAbbreviatedPath" : "\/img\/app\/login.png",
       "initialSize" : 2334,
       "fileType" : 8192
-    },
-    "\/twitter\/OAuth.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/twitter\/OAuth.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/img\/app\/splash.png" : {
       "ignoreWasSetByUser" : 0,
@@ -126,15 +126,6 @@
       "outputAbbreviatedPath" : "\/js\/transit.min.min.js",
       "fileType" : 64
     },
-    "\/twitter\/twitteroauth.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/twitter\/twitteroauth.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/scss\/style.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -158,16 +149,14 @@
       "outputAbbreviatedPath" : "\/js\/jquery-1.10.2.min.min.js",
       "fileType" : 64
     },
-    "\/img\/icons\/icon.png" : {
+    "\/twitter\/twitteroauth.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/icons\/icon.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/icons\/icon.png",
-      "initialSize" : 11935,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/twitter\/twitteroauth.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/img\/app\/front.png" : {
       "ignoreWasSetByUser" : 0,
@@ -178,6 +167,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/app\/front.png",
       "initialSize" : 2267,
+      "fileType" : 8192
+    },
+    "\/img\/icons\/icon.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/icons\/icon.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/icons\/icon.png",
+      "initialSize" : 11935,
       "fileType" : 8192
     },
     "\/img\/app\/back.png" : {
@@ -279,8 +279,8 @@
       "trailing" : 1,
       "nonew" : 1,
       "es3" : 0,
-      "freeze" : 1,
       "yui" : 0,
+      "freeze" : 1,
       "mootools" : 0,
       "proto" : 0,
       "boss" : 0,

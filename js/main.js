@@ -1,5 +1,6 @@
 $(document).ready(function(){
     
+    $('.user').val('');
     var profiles = "";
     
     //randomize the profiles
@@ -246,16 +247,28 @@ $(document).ready(function(){
             //thanks for the cookies, take your prize
             $('.user').val('Aguarde...');
             
-            //cross domain attemp, NO SUCCESS AT ALL WITH THIS BITCH
-            // var xhr = new XMLHttpRequest({ mozSystem: true });
-            // xhr.open("GET", "http://179.111.137.145/twitter/index.php", true);
-            // xhr.responseType="json";
-            // xhr.send();
-            // xhr.onload = function(){
-                //profiles = xhr.response;
-                profiles = JSON.parse('[{"id":14839072,"url":"http:\/\/pbs.twimg.com\/profile_images\/424772189942845440\/wh2qdCXF_normal.png"},{"id":19248743,"url":"http:\/\/pbs.twimg.com\/profile_images\/378800000417686822\/106adcb6d534b731e4fada1d1d9099ee_normal.jpeg"},{"id":105629787,"url":"http:\/\/pbs.twimg.com\/profile_images\/636051312\/plano_de_fundo_normal.jpg"},{"id":410401083,"url":"http:\/\/pbs.twimg.com\/profile_images\/1634484039\/dinheiro-em-arvore_normal.jpg"},{"id":1299006804,"url":"http:\/\/pbs.twimg.com\/profile_images\/427815052012290048\/D_hOVRoK_normal.png"},{"id":107553202,"url":"http:\/\/pbs.twimg.com\/profile_images\/649011670\/OQAAAL8Tc0-JLpWI2brr5aZnH7vskE7vjYF3spQD0pknf43PBEpConojYS60nhSM3KWNhZoBYjTQpnsvqs6AYGtgRdMAm1T1UIknJzg8s_bo07GWREiJ583CR--e_normal.jpg"},{"id":42993829,"url":"http:\/\/pbs.twimg.com\/profile_images\/1418877830\/avatar_twitter_normal.jpg"},{"id":24762321,"url":"http:\/\/pbs.twimg.com\/profile_images\/3467593608\/18c29991cdc584279c235c83825e1dc7_normal.jpeg"},{"id":1057456902,"url":"http:\/\/pbs.twimg.com\/profile_images\/3059155383\/7b3abc5a1e9467ccf0bd9497da71b4db_normal.jpeg"},{"id":16428237,"url":"http:\/\/pbs.twimg.com\/profile_images\/1052266215\/don-draper-mad-men_normal.jpg"},{"id":14839072,"url":"http:\/\/pbs.twimg.com\/profile_images\/424772189942845440\/wh2qdCXF_normal.png"},{"id":19248743,"url":"http:\/\/pbs.twimg.com\/profile_images\/378800000417686822\/106adcb6d534b731e4fada1d1d9099ee_normal.jpeg"},{"id":105629787,"url":"http:\/\/pbs.twimg.com\/profile_images\/636051312\/plano_de_fundo_normal.jpg"},{"id":410401083,"url":"http:\/\/pbs.twimg.com\/profile_images\/1634484039\/dinheiro-em-arvore_normal.jpg"},{"id":1299006804,"url":"http:\/\/pbs.twimg.com\/profile_images\/427815052012290048\/D_hOVRoK_normal.png"},{"id":107553202,"url":"http:\/\/pbs.twimg.com\/profile_images\/649011670\/OQAAAL8Tc0-JLpWI2brr5aZnH7vskE7vjYF3spQD0pknf43PBEpConojYS60nhSM3KWNhZoBYjTQpnsvqs6AYGtgRdMAm1T1UIknJzg8s_bo07GWREiJ583CR--e_normal.jpg"},{"id":42993829,"url":"http:\/\/pbs.twimg.com\/profile_images\/1418877830\/avatar_twitter_normal.jpg"},{"id":24762321,"url":"http:\/\/pbs.twimg.com\/profile_images\/3467593608\/18c29991cdc584279c235c83825e1dc7_normal.jpeg"},{"id":1057456902,"url":"http:\/\/pbs.twimg.com\/profile_images\/3059155383\/7b3abc5a1e9467ccf0bd9497da71b4db_normal.jpeg"},{"id":16428237,"url":"http:\/\/pbs.twimg.com\/profile_images\/1052266215\/don-draper-mad-men_normal.jpg"}]');
+            //do it another way, systemXRH not working, amazing!
+            var scriptID = null;
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            script.setAttribute('src', 'http://179.111.137.116/twitter/index.php?user='+user);
+            script.setAttribute('id', 'xss_ajax_script');
+            
+            scriptID = document.getElementById('xss_ajax_script');
+            if(scriptID){
+                document.getElementsByTagName('head')[0].removeChild(scriptID);
+            }
+            
+            // Insert <script> into DOM
+            document.getElementsByTagName('head')[0].appendChild(script);
+            
+            $('#xss_ajax_script').load(function(){
+                profiles = JSON.parse(JSON_DATA);
                 createGame(profiles);
-            // };
+            });
+            
+            
+            
         }
     });
     
