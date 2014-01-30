@@ -239,8 +239,6 @@ $(document).ready(function(){
     $('button.go').click(function(){
         user = $('.user').val();
         
-        window.alert(user);
-        
         //why don`t you give me cookies?
         if(user===''){
             window.alert('Preencha seu @username');
@@ -254,7 +252,8 @@ $(document).ready(function(){
             xhr.open("GET", "http://jotadev.com.br/twitter/index.php?user="+user, true);
             xhr.onreadystatechange = function () {
                 if (xhr.status === 200 && xhr.readyState === 4) {
-                    createGame(JSON.parse(xhr.response));
+                    profiles = JSON.parse(xhr.response);
+                    createGame(profiles);
                 }
             };
             xhr.onerror = function () {
