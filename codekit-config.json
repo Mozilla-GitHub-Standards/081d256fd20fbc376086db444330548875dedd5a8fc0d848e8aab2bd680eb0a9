@@ -13,25 +13,14 @@
       "initialSize" : 47188,
       "fileType" : 8192
     },
-    "\/js\/main.min.js" : {
+    "\/index.html" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/main.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/main.min.min.js",
-      "fileType" : 64
-    },
-    "\/css\/style.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/style.css",
+      "inputAbbreviatedPath" : "\/index.html",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "fileType" : 2048
     },
     "\/img\/app\/bgUsername.png" : {
       "ignoreWasSetByUser" : 0,
@@ -44,14 +33,16 @@
       "initialSize" : 99326,
       "fileType" : 8192
     },
-    "\/index.html" : {
+    "\/js\/main.min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/js\/main.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/main.min.min.js",
+      "fileType" : 64
     },
     "\/img\/app\/newGame.png" : {
       "ignoreWasSetByUser" : 0,
@@ -64,6 +55,24 @@
       "initialSize" : 9667,
       "fileType" : 8192
     },
+    "\/css\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/twitter\/OAuth.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/twitter\/OAuth.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/img\/app\/login.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -74,15 +83,6 @@
       "outputAbbreviatedPath" : "\/img\/app\/login.png",
       "initialSize" : 2334,
       "fileType" : 8192
-    },
-    "\/twitter\/OAuth.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/twitter\/OAuth.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/img\/app\/splash.png" : {
       "ignoreWasSetByUser" : 0,
@@ -158,6 +158,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/img\/icons\/icon.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/icons\/icon.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/icons\/icon.png",
+      "initialSize" : 11935,
+      "fileType" : 8192
+    },
     "\/img\/app\/front.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -169,15 +180,15 @@
       "initialSize" : 2267,
       "fileType" : 8192
     },
-    "\/img\/icons\/icon.png" : {
+    "\/img\/app\/back.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/icons\/icon.png",
+      "inputAbbreviatedPath" : "\/img\/app\/back.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/icons\/icon.png",
-      "initialSize" : 11935,
+      "outputAbbreviatedPath" : "\/img\/app\/back.png",
+      "initialSize" : 12220,
       "fileType" : 8192
     },
     "\/js\/main.js" : {
@@ -190,17 +201,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/main.min.js",
       "fileType" : 64
-    },
-    "\/img\/app\/back.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/app\/back.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/app\/back.png",
-      "initialSize" : 12220,
-      "fileType" : 8192
     }
   },
   "manualImportLinks" : [
