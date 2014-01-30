@@ -239,6 +239,8 @@ $(document).ready(function(){
     $('button.go').click(function(){
         user = $('.user').val();
         
+        window.alert(user);
+        
         //why don`t you give me cookies?
         if(user===''){
             window.alert('Preencha seu @username');
@@ -248,25 +250,17 @@ $(document).ready(function(){
             $('.user').val('Aguarde...');
             
             //do it another way, systemXRH not working, amazing!
-            var scriptID = null;
-            var script = document.createElement('script');
-            script.setAttribute('type', 'text/javascript');
-            script.setAttribute('src', 'http://jotadev.com.br/twitter/index.php?user='+user);
-            script.setAttribute('id', 'xss_ajax_script');
-            
-            scriptID = document.getElementById('xss_ajax_script');
-            if(scriptID){
-                document.getElementsByTagName('head')[0].removeChild(scriptID);
-            }
-            
-            // Insert <script> into DOM
-            document.getElementsByTagName('head')[0].appendChild(script);
-            
-            $('#xss_ajax_script').load(function(){
-                profiles = JSON.parse(JSON_DATA);
-                createGame(profiles);
-            });
-            
+            var xhr = new XMLHttpRequest({mozSystem: true});
+            xhr.open("GET", "http://jotadev.com.br/twitter/index.php?user="+user, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.status === 200 && xhr.readyState === 4) {
+                    createGame(JSON.parse(xhr.response));
+                }
+            };
+            xhr.onerror = function () {
+                window.alert('deu merda');
+            };
+            xhr.send();
             
             
         }

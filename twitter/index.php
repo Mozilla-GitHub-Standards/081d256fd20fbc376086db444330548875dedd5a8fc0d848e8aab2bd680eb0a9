@@ -54,6 +54,6 @@ foreach ($users as $id) {
 $result = json_encode($profile_images);
 
 //return a JSON with the result
-echo 'JSON_DATA = \''.$result.'\';';
+echo $result;
 
 // good bye
