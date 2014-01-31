@@ -1,3 +1,9 @@
+Autor
+=======
+Jonathan Querubina
+jonathan@phocus.com.br
+Free to use and distribute, modify, increment! :)
+
 Mozilla FirefoxOS
 =======
 App para a hackaton da Mozila na #CPBR7.
